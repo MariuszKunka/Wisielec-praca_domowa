@@ -7,7 +7,7 @@ void Initialize();
 
 void GetInput();
 
-void Update(float deltaTime);
+bool Update(float deltaTime);
 
 void Render();
 
@@ -46,9 +46,9 @@ void GetInput()
 
 }
 
-void Update(float deltaTime)
+bool Update(float deltaTime)
 {
-	game.OnUpdate(deltaTime);
+	exitGame = game.OnUpdate(deltaTime);
 }
 
 void Render()
