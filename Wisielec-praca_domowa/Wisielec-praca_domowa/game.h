@@ -16,7 +16,7 @@ public:
 private:
 	bool CheckInputLetter(char letter);
 	std::string guessedWord;
-	std::vector<std::string> wordsPool = { "kolor", "silnik", "wzorzec", "silnie", "kanapka" };
+	std::vector<std::string> wordsPool;
 	std::vector<bool> guessedLetters;
 	int lifeCounter = 10;
 	bool isFinished = false;

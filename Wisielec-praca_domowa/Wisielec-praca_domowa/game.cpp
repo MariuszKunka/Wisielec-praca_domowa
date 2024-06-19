@@ -69,7 +69,7 @@ bool Game::OnUpdate(float deltatime)
 
 void Game::OnRender()
 {
-	cout << guessedWord << endl; // debugowe
+	//cout << guessedWord << endl; // debug
 	string displayedWord = guessedWord;
 	for (int i = 0; i < guessedWord.length(); ++i)
 	{
@@ -84,7 +84,7 @@ void Game::OnRender()
 	}
 
 	cout << "Pozostale szanse: " << lifeCounter <<endl;
-	cout << "Slowo: " << "(" << displayedWord.length() << ")" << displayedWord << endl;
+	cout << "Slowo (" << displayedWord.length() << "): " << displayedWord << endl;
 
 	if (isFinished)
 	{
@@ -106,7 +106,12 @@ void Game::OnRender()
 void Game::OnShutdown()
 {
 	guessedLetters.clear();
-
+	guessedWord.clear();
+	wordsPool.clear();
+	lifeCounter = 10;
+	isFinished = false;
+	isWon = false;
+	
 }
 
 vector<string> Game::GetWordsFromFile(string filepath)
