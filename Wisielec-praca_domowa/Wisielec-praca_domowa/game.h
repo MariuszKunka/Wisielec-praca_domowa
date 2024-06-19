@@ -19,10 +19,11 @@ public:
 	bool OnUpdate(float deltatime);
 	void OnRender();
 	void OnShutdown();
+	std::vector<std::string> GetWordsFromFile(std::string filepath);
 
 
 private:
-	std::string testWord;
+	std::string guessedWord;
 	std::vector<std::string> wordsPool = { "kolor", "silnik", "wzorzec", "silnie", "kanapka" };
 	std::vector<bool> guessedLetters;
 	GameState gameState = GameState::START;

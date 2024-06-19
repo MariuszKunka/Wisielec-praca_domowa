@@ -49,6 +49,8 @@ void GetInput()
 bool Update(float deltaTime)
 {
 	exitGame = game.OnUpdate(deltaTime);
+
+	return true;
 }
 
 void Render()
