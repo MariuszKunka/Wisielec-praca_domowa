@@ -62,12 +62,9 @@ bool Game::OnUpdate(float deltatime)
 			isWon = true;
 			isFinished = true;
 		}
-
 	}
 
-
-
-	return false;
+	return isFinished;
 }
 
 void Game::OnRender()
