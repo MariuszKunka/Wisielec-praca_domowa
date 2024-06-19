@@ -22,10 +22,10 @@ int main()
 
 	Initialize();
 
-	while (exitGame)
+	while (!exitGame)
 	{
 		GetInput();
-		Update(0.0f);
+		Update(1000.0f);
 		Render();
 		
 	}
@@ -43,7 +43,7 @@ void Initialize()
 
 void GetInput()
 {
-
+	game.OnInput();
 }
 
 bool Update(float deltaTime)

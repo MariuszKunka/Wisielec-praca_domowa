@@ -4,15 +4,6 @@
 
 class Game
 {
-	enum class GameState
-	{
-		START,
-		UPDATE,
-		FINISH
-	};
-
-
-
 public:
 	void OnInit();
 	void OnInput();
@@ -23,8 +14,13 @@ public:
 
 
 private:
+	bool CheckInputLetter(char letter);
 	std::string guessedWord;
 	std::vector<std::string> wordsPool = { "kolor", "silnik", "wzorzec", "silnie", "kanapka" };
 	std::vector<bool> guessedLetters;
-	GameState gameState = GameState::START;
+	int lifeCounter = 10;
+	bool isFinished = false;
+	bool isWon = false;
+
+
 };
